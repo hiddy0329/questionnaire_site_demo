@@ -45,9 +45,19 @@
     print '』<br/>';
   }
 
-  print '<form>';
-  print '<input type="button" onclick="history.back()" value="戻る">';
-  print '</form>';
+  if ($nickname == '' || $email == '' || $opinion == '')
+  {
+    print '<form>';
+    print '<input type="button" onclick="history.back()" value="戻る">';
+    print '</form>';
+  }
+  else
+  {
+    print '<form method="post" action="thanks.php">';
+    print '<input type="button" onclick="history.back()" value="戻る">';
+    print '<input type="submit" value="OK">';
+    print '</form>';
+  }
 ?>
 </body>
 </html>
