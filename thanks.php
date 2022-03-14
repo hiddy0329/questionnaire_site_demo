@@ -10,6 +10,10 @@
     $email = $_POST['email'];
     $opinion = $_POST['opinion'];
 
+    $nickname = htmlspecialchars($nickname);
+    $email = htmlspecialchars($email);
+    $opinion = htmlspecialchars($opinion);
+
     print $nickname;
     print '様<br/>';
     print 'ご意見ありがとうございました。<br/>';

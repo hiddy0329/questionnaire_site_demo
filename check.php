@@ -11,6 +11,10 @@
   $email = $_POST['email'];
   $opinion = $_POST['opinion'];
 
+  $nickname = htmlspecialchars($nickname);
+  $email = htmlspecialchars($email);
+  $opinion = htmlspecialchars($opinion);
+
   if ($nickname == '')
   {
     print 'ニックネームが入力されていません。<br/>';
