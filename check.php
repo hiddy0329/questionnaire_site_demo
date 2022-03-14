@@ -54,6 +54,9 @@
   else
   {
     print '<form method="post" action="thanks.php">';
+    print '<input type="hidden" name="nickname" value="'.$nickname.'">';
+    print '<input type="hidden" name="email" value="'.$email.'">';
+    print '<input type="hidden" name="opinion" value="'.$opinion.'">';
     print '<input type="button" onclick="history.back()" value="戻る">';
     print '<input type="submit" value="OK">';
     print '</form>';

@@ -6,7 +6,18 @@
 </head>
 <body>
   <?php
-    print 'ご意見ありがとうございました<br/>';
+    $nickname = $_POST['nickname'];
+    $email = $_POST['email'];
+    $opinion = $_POST['opinion'];
+
+    print $nickname;
+    print '様<br/>';
+    print 'ご意見ありがとうございました。<br/>';
+    print '頂いたご意見『';
+    print $opinion;
+    print '』<br/>';
+    print $email;
+    print 'にメールを送りましたのでご確認ください。';
   ?>
 </body>
 </html>
