@@ -8,15 +8,41 @@
 
 <?php
   $nickname = $_POST['nickname'];
+  $email = $_POST['email'];
+  $opinion = $_POST['opinion'];
+
   if ($nickname == '')
   {
-    print 'ニックネームが入力されていません';
+    print 'ニックネームが入力されていません。<br/>';
   }
   else
   {
     print 'ようこそ';
     print $nickname;
     print '様';
+    print '<br/>';
+  }
+
+  if ($email == '')
+  {
+    print 'メールアドレスが入力されていません。<br/>';
+  }
+  else
+  {
+    print 'メールアドレス:';
+    print $email;
+    print '<br/>';
+  }
+
+  if ($opinion == '')
+  {
+    print 'ご意見が入力されていません。<br/>';
+  }
+  else
+  {
+    print 'ご意見『';
+    print $opinion;
+    print '』<br/>';
   }
 ?>
 </body>
