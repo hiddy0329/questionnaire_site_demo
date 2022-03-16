@@ -37,6 +37,9 @@
 
     // データベース切断
     $dbh = null;
+
+    print '<br/>';
+    print '<a href="kensaku.html">検索画面に戻る</a>';
   ?>
 </body>
 </html>

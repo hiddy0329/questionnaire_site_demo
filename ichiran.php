@@ -34,6 +34,10 @@
 
     // データベース切断
     $dbh = null;
+
+    print '<br/>';
+    print '<a href="menu.html">メニューに戻る</a>';
+
   ?>
 </body>
 </html>
