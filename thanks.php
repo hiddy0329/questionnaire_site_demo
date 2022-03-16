@@ -6,6 +6,7 @@
 </head>
 <body>
   <?php
+    try {
     // データベースへ接続
     $dsn = 'mysql:dbname=phpkiso;host=localhost;charset=utf8';
     $user = 'root';
@@ -45,6 +46,11 @@
     
     // データベース切断
     $dbh = null;
+    }
+    catch(PDOException $e)
+    {
+      print 'ただいま障害により大変ご迷惑をお掛けしております。';
+    }
   ?>
 </body>
 </html>
