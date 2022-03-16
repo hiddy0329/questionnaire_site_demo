@@ -5,7 +5,13 @@
 <title>ＰＨＰ基礎</title>
 </head>
 <body>
-  <?php
+<?php
+    // データベースへ接続
+    $dsn = 'mysql:dbname=phpkiso;host=localhost;charset=utf8';
+    $user = 'root';
+    $password = 'root';
+    $dbh = new PDO($dsn, $user, $password);
+    
     $nickname = $_POST['nickname'];
     $email = $_POST['email'];
     $opinion = $_POST['opinion'];
@@ -30,6 +36,14 @@
     mb_language('Japanese');
     mb_internal_encoding("UTF-8");
     mb_send_mail($email, $mail_sub, $mail_body, $mail_head);
-  ?>
+
+    // データベースへ保存
+    $sql = 'INSERT INTO anketo (nickname, email, opinion) VALUES ("'.$nickname.'", "'.$email.'", "'.$opinion.'")';
+    $stmt = $dbh->prepare($sql);
+    $stmt->execute();
+    
+    // データベース切断
+    $dbh = null;
+?>
 </body>
 </html>
