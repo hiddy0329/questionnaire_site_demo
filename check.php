@@ -7,14 +7,17 @@
 <body>
 
 <?php
+  // フォームで送られてきた値を変数に代入
   $nickname = $_POST['nickname'];
   $email = $_POST['email'];
   $opinion = $_POST['opinion'];
-
+  
+  // サニタイジング
   $nickname = htmlspecialchars($nickname);
   $email = htmlspecialchars($email);
   $opinion = htmlspecialchars($opinion);
-
+  
+  // バリデーション
   if ($nickname == '')
   {
     print 'ニックネームが入力されていません。<br/>';

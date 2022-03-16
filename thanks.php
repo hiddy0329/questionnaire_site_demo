@@ -30,7 +30,8 @@
     print $email;
     print 'にメールを送りましたのでご確認ください。<br/>';
     print '<a href="ichiran.php">アンケート一覧へ</a>';
-
+    
+    // 自動メール送信機能
     $mail_sub = 'アンケートを受け付けました。';
     $mail_body = $nickname."様へ\nアンケートご協力ありがとうございました。";
     $mail_body = html_entity_decode($mail_body, ENT_QUOTES, "UTF-8");
