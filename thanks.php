@@ -5,7 +5,7 @@
 <title>ＰＨＰ基礎</title>
 </head>
 <body>
-<?php
+  <?php
     // データベースへ接続
     $dsn = 'mysql:dbname=phpkiso;host=localhost;charset=utf8';
     $user = 'root';
@@ -44,6 +44,6 @@
     
     // データベース切断
     $dbh = null;
-?>
+  ?>
 </body>
 </html>
