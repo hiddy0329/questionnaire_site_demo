@@ -27,7 +27,8 @@
     print $opinion;
     print '』<br/>';
     print $email;
-    print 'にメールを送りましたのでご確認ください。';
+    print 'にメールを送りましたのでご確認ください。<br/>';
+    print '<a href="ichiran.php">アンケート一覧へ</a>';
 
     $mail_sub = 'アンケートを受け付けました。';
     $mail_body = $nickname."様へ\nアンケートご協力ありがとうございました。";
